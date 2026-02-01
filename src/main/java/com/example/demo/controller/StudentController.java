@@ -20,7 +20,7 @@ public class StudentController {
 
     @GetMapping("/all-students")
     public List<Student> getAllStrudents(){
-        System.out.println("My commit645");
+        System.out.println("My commit6455");
         return studentDetailsService.getStudents();
     }
 
