@@ -26,6 +26,6 @@ public class StudentDetailsService {
         return studentRepository.getReferenceById(id);
     }
     public Student addStudent(Student student){
-        return studentRepository.save(student);
+        return studentRepository.save(student); //change
     }
 }

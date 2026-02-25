@@ -32,7 +32,7 @@ public class StudentController {
     }
     @PostMapping("/add-student")
     public Student addStudent(@RequestBody Student student){
-        return studentDetailsService.addStudent(student);
+        return studentDetailsService.addStudent(student);// change
     }
 
 
