@@ -34,7 +34,7 @@ public class StudentDetailsService {
         Student existingStudent = studentRepository.findById(id).orElse(null);
         existingStudent.setName(student.getName());
         existingStudent.setAge(student.getAge());
-        return studentRepository.save(existingStudent);
+        return studentRepository.save(existingStudent); // recent
 
     }
 }
