@@ -25,7 +25,16 @@ public class StudentDetailsService {
     public Student getStudentById(int id) {
         return studentRepository.getReferenceById(id);
     }
-    public Student addStudent(Student student){
+    //post
+    public Student addStudent(Student student) {
         return studentRepository.save(student); //change
+    }
+    //put
+    public Student updateStudent (int id , Student student){
+        Student existingStudent = studentRepository.findById(id).orElse(null);
+        existingStudent.setName(student.getName());
+        existingStudent.setAge(student.getAge());
+        return studentRepository.save(existingStudent);
+
     }
 }
