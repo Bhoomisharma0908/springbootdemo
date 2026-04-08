@@ -27,7 +27,7 @@ public class StudentDetailsService {
     }
     //post
     public Student addStudent(Student student) {
-        return studentRepository.save(student); //change
+        return studentRepository.save(student); // if new -> create , if old-> update
     }
     //put
     public Student updateStudent (int id , Student student){
