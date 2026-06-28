@@ -32,7 +32,7 @@ public class StudentController {
         return studentDetailsService.getStudentById(id);
     }
     @PostMapping("/add-student")
-    public Student addStudent(@Valid @RequestBody Student student){
+    public Student addStudent(@Valid @RequestBody Student student){  //@valid added
         return studentDetailsService.addStudent(student);// change
     }
     @PutMapping("/update-student/{id}")

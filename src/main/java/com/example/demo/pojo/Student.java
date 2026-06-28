@@ -11,7 +11,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank(message = "Name is required")   //bean validation
+    @NotBlank(message = "Name is required")   // added bean validation
     private String name;
     @Min(value = 1, message = "Age must be greater than 0")
     private int age;
