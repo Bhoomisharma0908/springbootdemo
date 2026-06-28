@@ -1,6 +1,8 @@
 package com.example.demo.pojo;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "student")
@@ -9,7 +11,9 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank(message = "Name is required")
     private String name;
+    @Min(value = 1, message = "Age must be greater than 0")
     private int age;
 
     public Student() {
